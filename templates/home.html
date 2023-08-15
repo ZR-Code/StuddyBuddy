@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='StudyBuddy.png') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" media="screen and (max-width: 450px)" href="{{ url_for('static', filename='mobilehome.css') }}">
+
 
 
     <title>StuddyBuddy</title>
@@ -13,12 +15,12 @@
 <body>
     <header class="navbar">
         <h2>StuddyBuddy</h3>
-        <div class="links">
-            <a href="#">Your Flashcards</a>
-            <a href="#">Study</a>
+        <nav class="links">
+            <a id="Flashcards" href="#">Your Flashcards</a>
+            <a id="Study" href="#">Study</a>
             <a href="#">Home</a>
             <span><button class="login" style="text-align: right;">Login</button></span>
-        </div>
+        </nav>
     </header>
     
 </body>
