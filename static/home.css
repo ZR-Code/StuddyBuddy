@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 body {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    background: hsla(0, 0%, 0%, 1);
+
+    background: linear-gradient(-45deg, hsla(0, 0%, 0%, 1) 42%, hsla(48, 100%, 67%, 1) 100%);
+    
+    background: -moz-linear-gradient(-45deg, hsla(0, 0%, 0%, 1) 42%, hsla(48, 100%, 67%, 1) 100%);
+    
+    background: -webkit-linear-gradient(-45deg, hsla(0, 0%, 0%, 1) 42%, hsla(48, 100%, 67%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#FFDE59", GradientType=1 );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
 }
 * {
     font-family: 'Poppins';
@@ -55,21 +70,136 @@ a:hover::before {
     right: 0;
 }
 .navbar button{
+    font-size: 16px;
+    font-family: 'Poppins';
+    background-color: black;
+    border: none;
+    color: rgb(255, 222, 89);
+    font-weight: 700;
+    border-style: solid;
+    --c:  rgb(255, 222, 89); /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
     font-size: 14px;
     border-radius: 15px;
     padding: 8px 40px;
     border-style: solid;
     background-color: black;
     font-weight: 800;
-    color: rgb(255,222,89);
-    color: linear-gradient(0deg, rgba(255,222,89,1) 0%, rgba(255,145,77,1) 100%);   
-    background-color: linear-gradient(0deg, rgba(255,222,89,1) 0%, rgba(255,145,77,1) 100%); 
-    border-color: rgb(255, 222, 89)
+
+
 
 }
-.navbar button:hover {
+  .navbar button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
     color: black;
-    background: rgb(255,222,89);
-
-    transition: .5s;
 }
+.navbar button:active {
+    color: #fff;
+  }
+
+.title {
+    position: relative;
+    height: 400px;
+
+}
+.title-child {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    font-family: 'Bungee';
+    font-size: 96px;
+    color: white;
+
+}
+
+.floating {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+	animation: animate 3s ease-in-out infinite;
+
+
+	font-size: 120px;
+	font-family: 'Bungee';
+	font-weight: 500;
+    color:rgb(255, 222, 89);
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.join-btn {
+    position: absolute;
+    height: 5%;
+    width: 15%;
+    border-radius: 20px;
+    top: 45%;
+    left: 42%;
+    border-style: solid;
+
+}
+.join-btn {
+    --c:  rgb(255, 222, 89); /* the color*/
+    
+    box-shadow: 0 0 0 .2em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  .join-btn:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+    color: black;
+  }
+  .join-btn:active {
+    color: #fff;
+  }
+  
+  
+  
+
+ .join-btn {
+    font-size: 16px;
+    font-family: 'Poppins';
+    background-color: black;
+    border: none;
+    color: rgb(255, 222, 89);
+    font-weight: 700;
+  }
