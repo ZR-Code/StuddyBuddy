@@ -18,15 +18,17 @@
         <nav class="links">
             <a id="Flashcards" href="#">Your Flashcards</a>
             <a id="Study" href="#">Study</a>
-            <a href="#">Home</a>
-            <span><button class="login" style="text-align: right;">Login</button></span>
+            <a id="Home" href="#">Home</a>
+            <span><button class="login" id="nav-mini-a" style="text-align: right;"><a class="nav-mini-a" href="{{ url_for('login') }}">Login</a></button></span>
         </nav>
     </header>
     <div class="title">
         
-        <span class="title-child">Learn at whole new<br> <span class="floating">levels</span></span>
+        <span class="title-child">Learn at whole new<br> <br><span class="floating">levels</span></span>
     </div>
-    <button class="join-btn">Join StuddyBuddy today!</button>
+    <div class="join-btn">
+        <button><a href="{{ url_for('login') }}">Join StuddyBuddy today!</a></button>
+    </div>
 
 
     
